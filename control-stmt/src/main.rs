@@ -10,7 +10,7 @@ fn main() {
     println!{"x is : {}", x};
 
     let numset = [36, 25, 49, 3, 64, 16, 9];
-    let prime  = getPrimeNumber(numset);
+    let prime  = get_prime_number(numset);
 
     println!{"first prime num: {}", prime};
 
@@ -20,11 +20,11 @@ fn is_ip_1_is_bigger(a: u32, b: u32) -> bool {
     if a>b {true} else {false}
 }
 
-fn getPrimeNumber(arr: [i32; 7]) -> i32 {
+fn get_prime_number(arr: [i32; 7]) -> i32 {
     let mut i =0;
     'outer:loop {
         let mut n = 2;
-        'inner: loop{
+        loop{
             if arr[i]%n == 0 {
                 if arr[i] == 2 {
                     break 'outer;
